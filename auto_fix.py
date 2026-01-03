@@ -57,8 +57,8 @@ def auto_fix_image(image_path, output_path):
             
             draw.polygon([tuple(p0), tuple(p1), tuple(p2), tuple(p3)], fill=bg_color_tuple)
             
-            # 2. Draw New Text "대한민국"
-            new_text = "대한민국"
+            # 2. Draw New Text "대한민국 부산"
+            new_text = "대한민국 부산"
             
             # Create text image
             # Calculate font size to fit height? 
@@ -85,11 +85,11 @@ def auto_fix_image(image_path, output_path):
             img.paste(resized_text_img, (x_min, y_min), resized_text_img)
 
     if found_error:
-        img.save(output_path)
-        print(f"Saved corrected image to {output_path}")
+        img.save("sample_fixed_busan.png")
+        print(f"Saved corrected image to sample_fixed_busan.png")
     else:
         print("Target text '대한안민국' not found.")
 
 if __name__ == "__main__":
     # Assuming the user saves the image as 'sample.png'
-    auto_fix_image("sample.png", "sample_fixed.png")
+    auto_fix_image("sample.png", "sample_fixed_busan.png")
