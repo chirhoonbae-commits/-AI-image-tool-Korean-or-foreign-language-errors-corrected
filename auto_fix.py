@@ -36,7 +36,7 @@ def auto_fix_image(image_path, output_path):
         # Removing spaces for check
         clean_text = text.replace(" ", "")
         
-        if "대한안민국" in clean_text or "안민" in clean_text:
+        if "대한안민국" in clean_text or "안민" in clean_text or "대한간맥국" in clean_text:
             print(f"Found error text: {text} -> Fixing to '대한민국'")
             found_error = True
             
